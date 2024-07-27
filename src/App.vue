@@ -8,7 +8,7 @@ const currentPage = ref('login'); // 'login' or 'signin'
 
 <template>
   <div>
-    <h1>Pharmacol</h1>
+    <h1><img src="favicon.png" width="75" height="auto" loading="lazy">Pharmacol</h1>
     <button @click="currentPage = 'login'">Login</button>
     <button @click="currentPage = 'signin'">Sign In</button>
     <Login v-if="currentPage === 'login'"/>
