@@ -40,6 +40,7 @@
 <script>
 import { auth } from '../firebase'; // Adjust the path as necessary
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from 'vue-router';
 
 export default {
   data() {
@@ -48,19 +49,22 @@ export default {
       password: '',
     };
   },
+  setup() {
+    const router = useRouter();
+    return { router };
+  },
   methods: {
-    handleLogin() {
-      signInWithEmailAndPassword(auth, this.email, this.password)
-        .then((userCredential) => {
-          const user = userCredential.user;
-          console.log('User signed in:', user);
-          alert('User signed in successfully.');
-        })
-        .catch((error) => {
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          alert(`Error: ${errorMessage}`);
-        });
+    async handleLogin() {
+      try {
+        const userCredential = await signInWithEmailAndPassword(auth, this.email, this.password);
+        const user = userCredential.user;
+        console.log('User signed in:', user);
+        this.router.push('/add-meds'); // Ensure this line is correct
+      } catch (error) {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(`Error: ${errorMessage}`);
+      }
     },
   },
 };
