@@ -5,7 +5,7 @@
       
       <!-- User ID field -->
       <div class="mb-3">
-        <label class="form-label" for="username">User ID</label>
+        
         <div class="input-group">
           <span class="input-group-text">
             <svg class="bi bi-person" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
@@ -18,7 +18,7 @@
 
       <!-- Password field -->
       <div class="mb-3">
-        <label class="form-label" for="password">Password</label>
+        
         <div class="input-group">
           <span class="input-group-text">
             <svg class="bi bi-lock" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
