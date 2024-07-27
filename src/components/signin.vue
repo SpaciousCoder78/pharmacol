@@ -20,25 +20,43 @@
   </template>
   
   <script>
-  export default {
-    data() {
-      return {
-        signInDetails: {
-          email: '',
-          password: '',
-          cpassword: '',
-        },
-      };
-    },
-    methods: {
-      handleSignIn() {
-        // Here you would handle the sign-in logic, possibly sending the signInDetails to your backend
-        console.log('Sign-In details:', this.signInDetails);
-        alert('Check console for sign-in details.');
+import { auth } from '../firebase'; // Adjust the path as necessary
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
+export default {
+  data() {
+    return {
+      signInDetails: {
+        email: '',
+        password: '',
+        cpassword: '',
       },
+    };
+  },
+  methods: {
+    handleSignIn() {
+      if (this.signInDetails.password !== this.signInDetails.cpassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+      createUserWithEmailAndPassword(auth, this.signInDetails.email, this.signInDetails.password)
+        .then((userCredential) => {
+          // Signed in 
+          const user = userCredential.user;
+          console.log('User created:', user);
+          alert('User created successfully.');
+          // You can redirect the user to another page or clear the form here
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // ..
+          alert(`Error: ${errorMessage}`);
+        });
     },
-  };
-  </script>
+  },
+};
+</script>
   
   <style scoped>
   .signin-container {
