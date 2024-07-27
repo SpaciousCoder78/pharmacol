@@ -1,5 +1,5 @@
 <template>
-  <div id="loginarea" class="d-flex align-items-center justify-content-center min-vh-100 bg-light">
+  <div id="loginarea" class="d-flex align-items-center justify-content-center min-vh bg-light">
     <div class="bg-white p-4 rounded shadow w-100 max-w-md">
       <h2 id="loginbanner" class="text-center mb-4">Login</h2>
       
