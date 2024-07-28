@@ -5,7 +5,7 @@
 
 <template>
     <div id="addmedspage">
-        <h1>Add New Medicines</h1>
+        <h2>Add New Medicines</h2>
         <!--Medicine name-->
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capsule" viewBox="0 0 16 16">
