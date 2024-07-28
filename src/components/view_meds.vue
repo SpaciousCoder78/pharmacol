@@ -1,47 +1,54 @@
 <template>
-    <div>
-        <h1>Medicines</h1>
-        <ul>
-            <li v-for="medicine in medicines" :key="medicine.id">
-                {{ medicine.name }} - {{ medicine.description }}
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Medicines</h1>
+        <ul class="list-group">
+            <li v-for="medicine in medicines" :key="medicine.id" class="list-group-item">
+                <h5>{{ medicine.name }}</h5>
+                <p>{{ medicine.description }}</p>
             </li>
         </ul>
     </div>
 </template>
 
 <script>
-import firebase from 'firebase/app';
-import 'firebase/database';
-
 export default {
     data() {
         return {
-            medicines: [],
+            medicines: [
+                { id: 1, name: 'Aspirin', description: 'Pain reliever' },
+                { id: 2, name: 'Ibuprofen', description: 'Anti-inflammatory' },
+                { id: 3, name: 'Paracetamol', description: 'Fever reducer' },
+            ],
         };
-    },
-    mounted() {
-        // Initialize Firebase
-        const firebaseConfig = {
-            // Your Firebase configuration
-        };
-        firebase.initializeApp(firebaseConfig);
-
-        // Retrieve medicines from Firebase database
-        const database = firebase.database();
-        const medicinesRef = database.ref('medicines');
-
-        medicinesRef.on('value', (snapshot) => {
-            const medicines = [];
-            snapshot.forEach((childSnapshot) => {
-                const medicine = childSnapshot.val();
-                medicines.push(medicine);
-            });
-            this.medicines = medicines;
-        });
     },
 };
 </script>
 
 <style>
-/* Add your custom styles here */
+.container {
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+.list-group-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    margin-bottom: 10px;
+}
+
+.list-group-item h5 {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #343a40;
+}
+
+.list-group-item p {
+    margin: 0;
+    color: #6c757d;
+}
 </style>
