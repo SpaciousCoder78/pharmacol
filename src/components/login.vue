@@ -59,7 +59,7 @@ export default {
         const userCredential = await signInWithEmailAndPassword(auth, this.email, this.password);
         const user = userCredential.user;
         console.log('User signed in:', user);
-        this.router.push('/add-meds'); // Ensure this line is correct
+        this.router.push('/web_mainmenu'); // Ensure this line is correct
       } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;

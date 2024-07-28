@@ -1,7 +1,4 @@
-<!--Main menu-->
-<script>
-  //java script here
-</script>
+
 
 <template>
     <div id="mainmenu">
@@ -13,7 +10,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Billing</h5>
                         <p class="card-text">Open the billing menu for billing</p>
-                        <a href="#" class="btn btn-primary">Billing</a>
+                        <button type="submit" class="btn btn-primary">Billing</button>
                     </div>
                 </div>
             </div>
@@ -23,7 +20,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Add New Medicines</h5>
                         <p class="card-text">Add New Medicines to the database</p>
-                        <a href="#" class="btn btn-primary">Add New Medicines</a>
+                        <button type="submit" class="btn btn-primary" @click="Toaddmeds">Add New Medicines</button>
                     </div>
                 </div>
             </div>
@@ -33,7 +30,7 @@
                     <div class="card-body">
                         <h5 class="card-title">View Receipts</h5>
                         <p class="card-text">View Past Bill Receipts</p>
-                        <a href="#" class="btn btn-primary">View Receipts</a>
+                        <button type="submit" class="btn btn-primary">View Receipts</button>
                     </div>
                 </div>
             </div>
@@ -43,7 +40,7 @@
                     <div class="card-body">
                         <h5 class="card-title">View Medicines</h5>
                         <p class="card-text">View Avaliable Medicines in the store</p>
-                        <a href="#" class="btn btn-primary">View Medicines</a>
+                        <button type="submit" class="btn btn-primary">View Medicines</button>
                     </div>
                 </div>
             </div>
@@ -52,6 +49,28 @@
     </div>
 </template>
 
+
+<script>
+
+import { useRouter } from 'vue-router';
+export default {
+  setup() {
+    const router = useRouter();
+    return { router };
+  },
+  methods: {
+    async Toaddmeds() {
+      try {
+        this.router.push('/add-meds'); // Ensure this line is correct
+      } catch (error) {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(`Error: ${errorMessage}`);
+      }
+    },
+  },
+};
+</script>
 <style>
     /*css here*/
 </style>

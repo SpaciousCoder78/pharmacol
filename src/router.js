@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Login from './components/login.vue';
 import SignIn from './components/signin.vue';
 import AddMeds from './components/add_meds.vue';
+import MainMenu from './components/web_mainmenu.vue'
 
 const routes = [
   {
@@ -19,6 +20,11 @@ const routes = [
     name: 'AddMeds',
     component: AddMeds,
   },
+  {
+    path: '/web_mainmenu',
+    name: 'MainMenu',
+    component : MainMenu,
+  }
 ];
 
 const router = createRouter({
