@@ -1,6 +1,6 @@
 # Pharmacol
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ![Vue.js](https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D)
@@ -22,6 +22,7 @@
   <tbody>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/SpaciousCoder78"><img src="https://avatars.githubusercontent.com/u/88923986?v=4?s=100" width="100px;" alt="Aryan Karamtoth"/><br /><sub><b>Aryan Karamtoth</b></sub></a><br /><a href="https://github.com/SpaciousCoder78/pharmacol/commits?author=SpaciousCoder78" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Arcane-WD"><img src="https://avatars.githubusercontent.com/u/119485294?v=4?s=100" width="100px;" alt="A Harshavardhan Reddy"/><br /><sub><b>A Harshavardhan Reddy</b></sub></a><br /><a href="https://github.com/SpaciousCoder78/pharmacol/commits?author=Arcane-WD" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
