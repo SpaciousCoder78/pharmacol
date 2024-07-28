@@ -21,11 +21,8 @@
 <table>
   <tbody>
     <tr>
-
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Lonelyguy123"><img src="https://avatars.githubusercontent.com/u/86297324?v=4?s=100" width="100px;" alt="Shastha Tyarla"/><br /><sub><b>Shastha Tyarla</b></sub></a><br /><a href="https://github.com/SpaciousCoder78/pharmacol/commits?author=Lonelyguy123" title="Code">💻</a></td>
-
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/SpaciousCoder78"><img src="https://avatars.githubusercontent.com/u/88923986?v=4?s=100" width="100px;" alt="Aryan Karamtoth"/><br /><sub><b>Aryan Karamtoth</b></sub></a><br /><a href="https://github.com/SpaciousCoder78/pharmacol/commits?author=SpaciousCoder78" title="Code">💻</a></td>
-
+        <td align="center" valign="top" width="14.28%"><a href="https://github.com/Lonelyguy123"><img src="https://avatars.githubusercontent.com/u/86297324?v=4?s=100"                         width="100px;" alt="Shastha Tyarla"/><br /><sub><b>Shastha Tyarla</b></sub></a><br /><a href="https://github.com/SpaciousCoder78/pharmacol/commits?                                author=Lonelyguy123" title="Code">💻</a></td>
+        <td align="center" valign="top" width="14.28%"><a href="https://github.com/SpaciousCoder78"><img src="https://avatars.githubusercontent.com/u/88923986?v=4?s=100" width="100px;" alt="Aryan Karamtoth"/><br /><sub><b>Aryan Karamtoth</b></sub></a><br /><a href="https://github.com/SpaciousCoder78/pharmacol/commits?author=SpaciousCoder78" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
