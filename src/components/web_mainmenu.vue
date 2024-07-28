@@ -10,7 +10,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Billing</h5>
                         <p class="card-text">Open the billing menu for billing</p>
-                        <button type="submit" class="btn btn-primary">Billing</button>
+                        <button type="submit" class="btn btn-primary" @click="ToBilling">Billing</button>
                     </div>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                     <div class="card-body">
                         <h5 class="card-title">View Receipts</h5>
                         <p class="card-text">View Past Bill Receipts</p>
-                        <button type="submit" class="btn btn-primary">View Receipts</button>
+                        <button type="submit" class="btn btn-primary" @click="ToReceipts">View Receipts</button>
                     </div>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                     <div class="card-body">
                         <h5 class="card-title">View Medicines</h5>
                         <p class="card-text">View Avaliable Medicines in the store</p>
-                        <button type="submit" class="btn btn-primary">View Medicines</button>
+                        <button type="submit" class="btn btn-primary" @click="ToViewMedicines">View Medicines</button>
                     </div>
                 </div>
             </div>
@@ -62,6 +62,34 @@ export default {
     async Toaddmeds() {
       try {
         this.router.push('/add-meds'); // Ensure this line is correct
+      } catch (error) {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(`Error: ${errorMessage}`);
+      }
+    },
+    async ToReceipts() {
+        try {
+             this.router.push('/receipts');
+        } catch (error) {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(`Error: ${errorMessage}`);
+      }
+    },
+
+async ToBilling() {
+      try {
+        this.router.push('/billing');
+      } catch (error) {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alert(`Error: ${errorMessage}`);
+      }
+    },
+    async ToViewMedicines() {
+      try {
+        this.router.push('/view_meds');
       } catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
