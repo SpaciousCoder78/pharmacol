@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
+import AddMeds from "./components/add_meds.vue"
 </script>
 
 <template>
