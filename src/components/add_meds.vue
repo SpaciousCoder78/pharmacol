@@ -1,10 +1,10 @@
 <script>
-import { db } from '../firebase.js'; 
-import { collection, addDoc } from "firebase/firestore";
+import supabase from '../supabase.js';
 
 export default {
   data() {
     return {
+      id: '',
       medicineName: '',
       company: '',
       dosage: '',
@@ -15,14 +15,15 @@ export default {
   methods: {
     async addMedicine() {
       try {
-        const docRef = await addDoc(collection(db, "medicines"), {
-          name: this.medicineName,
+        const {data,error} = await supabase.from('medicines').insert({
+          id:this.id,
+          medicineName: this.medicineName,
           company: this.company,
           dosage: this.dosage,
           expiryDate: this.expiryDate,
           price: this.price
-        });
-        console.log('Medicine added with ID:', docRef.id);
+        }).select();
+        console.log('Medicine added with ID:');
       } catch (e) {
         console.error('Error adding document:', e);
       }
@@ -34,6 +35,11 @@ export default {
 <template>
     <div id="addmedspage">
       <h2>Add New Medicines</h2>
+      <div class="input-group mb-3">
+        <span class="input-group-text" id="basic-addon1">ID</span>
+        <input type="text" class="form-control" placeholder="ID" v-model="id" aria-label="ID" aria-describedby="basic-addon1">
+      </div>
+
       <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1">
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capsule" viewBox="0 0 16 16">

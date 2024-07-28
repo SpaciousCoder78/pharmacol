@@ -17,8 +17,10 @@
     "vue-router": "^4.0.13"
   },
   "devDependencies": {
+    "@supabase/supabase-js": "^2.44.4",
     "@vitejs/plugin-vue": "^5.1.0",
     "firebase": "^10.12.4",
+    "supabase": "^1.187.3",
     "vite": "^5.3.5"
   }
 }
